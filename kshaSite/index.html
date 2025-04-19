@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organic Fertilizer - Nourish the Soil!</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            color: #fff;
+            padding-top: 60px; /* Add padding to avoid overlap with the fixed navigation */
+        }
+
+        /* General Styles */
+        header {
+            background-color: #f9a826; /* Yellow */
+            color: #fff;
+            padding: 15px;
+            text-align: center;
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #e33c32; /* Red */
+            padding: 10px 20px;
+            font-size: 1.2em;
+            text-align: center;
+            z-index: 10;
+        }
+
+        nav a {
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+
+        nav a:hover {
+            background-color: #f9a826;
+            border-radius: 5px;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(45deg, #e33c32, #f9a826);
+            color: white;
+            padding: 100px 20px;
+            text-align: center;
+        }
+
+        .hero h2 {
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 1.5em;
+        }
+
+        .cta-btn {
+            background-color: #fff;
+            color: #e33c32;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        .cta-btn:hover {
+            background-color: #f9a826;
+        }
+
+        /* Product Section */
+        .products {
+            padding: 50px 20px;
+            background-color: #333;
+            text-align: center;
+        }
+
+        .products h2 {
+            font-size: 2.5em;
+            margin-bottom: 30px;
+        }
+
+        .product-container {
+            display: flex;
+            justify-content: center;
+            gap: 40px; /* Space between the product tiles */
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .product-card {
+            width: 250px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            color: #333;
+            text-align: center;
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .product-card h3 {
+            color: #e33c32;
+        }
+
+        .product-card p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+
+        .product-card button {
+            background-color: #f9a826;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .product-card button:hover {
+            background-color: #e33c32;
+        }
+
+        /* Paramparagat Gram Vikas Yojana Section */
+        .pgvy-section {
+            padding: 50px 20px;
+            background-color: #f9a826;
+            text-align: center;
+        }
+
+        .pgvy-section h3 {
+            font-size: 2.5em;
+            color: #e33c32;
+        }
+
+        .pgvy-section p {
+            font-size: 1.2em;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        .pgvy-section img {
+            margin-top: 30px;
+            width: 100%;
+            max-width: 600px;
+        }
+          /* About Us Section */
+        .about {
+            padding: 50px 20px;
+            background-color: #f1f1f1; /* Lighter color to differentiate from products */
+            text-align: center;
+            border-bottom: 5px solid #e33c32; /* A dividing line to separate the sections */
+        }
+
+        .about h3 {
+            font-size: 2.5em;
+            color: #e33c32;
+        }
+
+        .about p {
+            font-size: 1.2em;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        .about img {
+            margin-top: 30px;
+            width: 100%;
+            max-width: 600px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #e33c32;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        footer .social-icons {
+            margin: 20px 0;
+        }
+
+        footer .social-icons a {
+            color: white;
+            margin: 0 15px;
+            font-size: 1.5em;
+        }
+
+        footer .social-icons a:hover {
+            color: #f9a826;
+        }
+
+        footer .social-icons img {
+            width: 30px; /* Set the desired size */
+            height: 30px; /* Set the desired size */
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>KSHA Organics</h1>
+    </header>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#products">Products</a>
+        <a href="#about">About Us</a>
+        <a href="#pgvy">Paramparagat Gram Vikas Yojana</a>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <h2>Nourish Your Soil, Nourish the Future</h2>
+        <p>Read the article below to learn more about the effects of chemical on soil.</p>
+        <a href="https://www.drishtiias.com/daily-updates/daily-news-editorials/tackling-soil-degradation-in-india" target="_blank" rel="noopener noreferrer"><button class="cta-btn">Article</button></a>
+    </section>
+
+    <!-- Products Section -->
+<!-- Product Section -->
+    <section id="products" class="products">
+         <h2>Our Products</h2>
+         <div class="product-container">
+           <div class="product-card">
+            <img src="images/fermentedOrganicManure.jpg" alt="Fermented Organic Manure">
+            <h3>Fermented Organic Fertilizer (Rs. 15/kg)</h3>
+            <p>Boost your soil’s health with our NPK-rich organic fertilizer and acts fast.</p>
+            <!-- Send product and price information to the form -->
+            <a href="order_form.html" target="_blank"><button>Buy Now</button></a>
+        </div>
+             <div class="product-card">
+                 <img src="images/organicManure.jpg" alt="Organic Manure">
+                 <h3>Organic Manure (Rs. 10/kg)</h3>
+                 <p>Enhance the soil’s microbial life and improve its structure. This acts slowly compared to the fermented product.</p>
+                 <!-- Send product and price information to the form -->
+            <a href="order_form.html" target="_blank"><button>Buy Now</button></a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Paramparagat Gram Vikas Yojana Section -->
+    <section id="pgvy" class="pgvy-section">
+        <h3>Paramparagat Gram Vikas Yojana (PGVY)</h3>
+        <p>Paramparagat Gram Vikas Yojana is an initiative by the Government of India aimed at promoting organic farming in rural areas. The scheme encourages farmers to adopt organic farming methods through financial support, training, and access to high-quality organic inputs. The goal is to ensure that farming becomes environmentally sustainable, economically viable, and socially beneficial for rural communities.</p>
+        <a href="https://pib.gov.in/PressReleasePage.aspx?PRID=2100761" target="_blank" rel="noopener noreferrer"><button class="cta-btn">Learn More</button></a>
+    </section>
+
+     <!-- About Us Section -->
+    <section id="about" class="about">
+         <h3>About Soil Degradation</h3>
+         <p>Soil degradation is a growing issue that affects agriculture, biodiversity, and the planet. Over-farming, deforestation, and chemical fertilizers have stripped the soil of essential nutrients. Our organic fertilizers are designed to replenish the soil and make it rich and healthy again, helping plants and ecosystems thrive.</p>
+         <img src="images/soildegrade.jpg" alt="Soil Degradation Image">
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>Contact Us: ksha.fertilizer@gmail.com</p>
+        <div class="social-icons">
+            <a href="https://www.instagram.com/official_ksha_/profilecard/?igsh=MTB6a2psY2FudG9sNw==" target="_blank" rel="noopener noreferrer"><img src="images/instagram.png" alt="Instagram"></a>
+            <a href="http://www.youtube.com/@Ksha-Official" target="_blank" rel="noopener noreferrer"><img src="images/youtube.png" alt="YouTube"></a>
+            <a href="https://x.com/Ksha_Ferti?t=BAbIU5apUmIoHkme0_pzlw&s=09" target="_blank" rel="noopener noreferrer"><img src="images/twitter.png" alt="Twitter"></a>
+        </div>
+        <p>Join the Organic Revolution!</p>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Form</title>
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+    <style>
+        /* General styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #e0e0e0;
+            flex-direction: column;
+        }
+
+        header {
+            text-align: center;
+            background-color: #333;
+            color: #fff;
+            padding: 5px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        section {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 600px;
+            box-sizing: border-box;
+            margin-top: 30px;
+        }
+
+        h2 {
+            color: #333;
+            font-size: 1.8em;
+        }
+
+        /* Form styling */
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        label {
+            font-weight: bold;
+            color: #333;
+        }
+
+        .form-input {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        input[type="radio"], input[type="number"], input[type="text"] {
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+
+        /* Radio buttons and checkboxes styling */
+        .radio-group {
+            display:flow-root;
+            flex-direction:column;
+        }
+
+        .radio-group label {
+            display: inline-block;
+            margin-left: 5px;
+            font-weight: normal;
+            color: #555;
+        }
+
+        /* Aligning radio buttons next to text */
+        .radio-group input[type="radio"] {
+            margin-right: 1px;
+            vertical-align: baseline;
+        }
+
+        /* Submit Button styling */
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            font-size: 1em;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            max-width: 200px;
+            margin: 0 auto;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        /* Asterisk styling */
+        .required {
+            color: red;
+            font-size: 1.2em;
+            margin-left: 5px;
+        }
+
+        /* Add spacing around form and adjust for small screens */
+        @media (max-width: 768px) {
+            section {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Fill the form to order</h1>
+    </header>
+
+    <section>
+        <h2>Order Details</h2>
+
+        <!-- Form for user to answer the questions -->
+        <form action="submit_order.php" method="POST">
+
+            <!-- Question 1: Choose Fertilizer -->
+            <div class="form-input">
+                <label for="chooseFerti">Choose Fertilizer <span class="required">*</span></label>
+                <div class="radio-group">
+                    <input type="radio" id="fom" name="chooseFerti" value="fom" required>
+                    <label for="fom">Fermented Organic Manure</label>
+                    <input type="radio" id="om" name="chooseFerti" value="om">
+                    <label for="om">Organic Manure</label>
+                </div>
+            </div>
+
+            <!-- Question 2: Quantity -->
+            <div class="form-input">
+                <label for="quantity">Quantity? (value is in kg) <span class="required">*</span></label>
+                <input type="number" id="quantity" name="quantity" min="1" required>
+            </div>
+
+            <!-- Question 3: Reason -->
+            <div class="form-input">
+                <label for="reason">Why do you want this fertilizer? <span class="required">*</span></label>
+                <input type="text" id="reason" name="reason" required>
+            </div>
+
+            <!-- Question 4: UPI or Phone Number -->
+            <div class="form-input">
+                <label for="upiname">Enter your UPI ID or phone number here. <span class="required">*</span></label>
+                <input type="text" id="upiname" name="upiname" required>
+            </div>
+
+            <!-- Question 5: Payment -->
+            <div class="form-input">
+                <label for="payment">Pay here (Select paid if successful) <span class="required">*</span></label>
+    
+                <!-- Image before options -->
+                <img src="images/aryanPhonePay.png" alt="Payment Icon" width="300" height="300" style="margin-right: 10px; vertical-align: middle;">
+
+                <div class="radio-group">
+                <input type="radio" id="paid" name="payment" value="paid" required>
+                <label for="paid">Paid</label>
+
+                <input type="radio" id="notpaid" name="payment" value="notpaid">
+                <label for="notpaid">Not Paid</label>
+                </div>
+            </div>
+
+
+            <!-- Question 6: International Orders -->
+            <div class="form-input">
+                <label for="international">For international orders, select interested and we will get in touch. <span class="required">*</span></label>
+                <div class="radio-group">
+                    <input type="radio" id="yes" name="international" value="yes" required>
+                    <label for="yes">Interested</label>
+                    <input type="radio" id="no" name="international" value="no">
+                    <label for="no">Not Interested</label>
+                </div>
+            </div>
+
+            <!-- Question 7: Any Questions -->
+            <div class="form-input">
+                <label for="anyqs">Any Questions?</label>
+                <input type="text" id="anyqs" name="anyqs">
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit">Submit Order</button>
+        </form>
+
+        <!-- Note for required fields -->
+        <p><span class="required">*</span> indicates a required field.</p>
+    </section>
+
+</body>
+</html>
